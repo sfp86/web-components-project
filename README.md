@@ -11,6 +11,7 @@ Colección de proyectos educativos desarrollados con **Web Components nativos** 
 Cronómetro con display de 7 segmentos estilo LED, implementado completamente con Web Components nativos.
 
 **Características**:
+
 - ✅ Display de 7 segmentos con renderizado dinámico
 - ✅ Precisión de centésimas de segundo
 - ✅ Botones de Iniciar/Pausar y Reiniciar
@@ -23,6 +24,7 @@ Cronómetro con display de 7 segmentos estilo LED, implementado completamente co
 **[📖 Documentación completa](./chrono/ARQUITECTURA.md)** | **[📄 README del proyecto](./chrono/README.md)**
 
 **Vista previa**:
+
 ```
 ┌──────────────────────────────────┐
 │      00 : 00 : 00 : 00          │
@@ -37,6 +39,7 @@ Cronómetro con display de 7 segmentos estilo LED, implementado completamente co
 Todos los proyectos utilizan el mismo método de ejecución:
 
 ### Requisitos previos:
+
 - Node.js instalado (para `http-server`)
 - Navegador moderno con soporte para Web Components
 
@@ -57,6 +60,7 @@ http-server ./
 ```
 
 ### Alternativa sin instalación:
+
 ```bash
 # Si tienes Python instalado
 python -m http.server 8080
@@ -69,17 +73,18 @@ npx http-server ./
 
 ## 🛠️ Tecnologías utilizadas
 
-| Tecnología | Versión | Propósito |
-|------------|---------|-----------|
-| **Custom Elements** | v1 | Crear elementos HTML personalizados |
-| **Shadow DOM** | DOM Standard | Encapsulación de estilos y estructura |
-| **ES6 Modules** | ECMAScript 2015+ | Sistema de módulos nativo |
-| **Custom Events** | DOM Events API | Comunicación entre componentes |
-| **JavaScript** | ES6+ | Lógica de negocio (clases, Map, arrow functions) |
-| **CSS3** | Standard | Estilos encapsulados (Flexbox, Grid, Transforms) |
-| **HTML5** | Standard | Estructura base y templates |
+| Tecnología          | Versión          | Propósito                                        |
+| ------------------- | ---------------- | ------------------------------------------------ |
+| **Custom Elements** | v1               | Crear elementos HTML personalizados              |
+| **Shadow DOM**      | DOM Standard     | Encapsulación de estilos y estructura            |
+| **ES6 Modules**     | ECMAScript 2015+ | Sistema de módulos nativo                        |
+| **Custom Events**   | DOM Events API   | Comunicación entre componentes                   |
+| **JavaScript**      | ES6+             | Lógica de negocio (clases, Map, arrow functions) |
+| **CSS3**            | Standard         | Estilos encapsulados (Flexbox, Grid, Transforms) |
+| **HTML5**           | Standard         | Estructura base y templates                      |
 
 ### ⚡ Sin dependencias
+
 - ✅ **Sin frameworks** (React, Angular, Vue)
 - ✅ **Sin librerías** (jQuery, Lodash)
 - ✅ **Sin transpiladores** (Babel, TypeScript)
@@ -91,18 +96,21 @@ npx http-server ./
 ## 📚 Conceptos aplicados
 
 ### Web Components
+
 - **Custom Elements**: Definición de elementos HTML personalizados
 - **Shadow DOM**: Encapsulación de estilos y estructura interna
 - **HTML Templates**: Plantillas reutilizables (opcional)
 - **ES Modules**: Carga de componentes como módulos
 
 ### Patrones de diseño
+
 - **Component-Based Architecture**: Cada funcionalidad en un componente
 - **Observer Pattern**: Comunicación mediante eventos
 - **Separation of Concerns**: Separación de lógica, estilos y templates
 - **Composition over Inheritance**: Composición de componentes
 
 ### Características técnicas
+
 - `observedAttributes`: Reactividad a cambios de atributos
 - `attributeChangedCallback`: Ciclo de vida de Custom Elements
 - `connectedCallback` / `disconnectedCallback`: Gestión del ciclo de vida
@@ -166,7 +174,7 @@ Este repositorio tiene como objetivo:
 Los Web Components nativos son compatibles con:
 
 | Navegador | Versión mínima |
-|-----------|----------------|
+| --------- | -------------- |
 | Chrome    | 67+            |
 | Firefox   | 63+            |
 | Safari    | 10.1+          |
@@ -179,16 +187,19 @@ Para navegadores antiguos, se puede usar [polyfills](https://github.com/webcompo
 ## 📖 Recursos de aprendizaje
 
 ### Documentación oficial
+
 - [MDN - Web Components](https://developer.mozilla.org/es/docs/Web/Web_Components)
 - [Custom Elements v1](https://html.spec.whatwg.org/multipage/custom-elements.html)
 - [Shadow DOM v1](https://dom.spec.whatwg.org/#shadow-trees)
 
 ### Tutoriales recomendados
+
 - [Web.dev - Custom Elements](https://web.dev/custom-elements-v1/)
 - [Web.dev - Shadow DOM](https://web.dev/shadowdom-v1/)
 - [CSS-Tricks - Web Components](https://css-tricks.com/an-introduction-to-web-components/)
 
 ### Librerías modernas (opcional)
+
 - [Lit](https://lit.dev/) - Simplifica la creación de Web Components
 - [Stencil](https://stenciljs.com/) - Compilador de Web Components
 
@@ -205,6 +216,7 @@ Este es un proyecto educativo. Si deseas contribuir:
 5. Crea un Pull Request
 
 ### Criterios para nuevos proyectos:
+
 - ✅ Web Components nativos (sin frameworks)
 - ✅ Código documentado y comentado
 - ✅ Incluir README específico del proyecto

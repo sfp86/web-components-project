@@ -52,6 +52,7 @@ npx http-server ./
 ```
 
 ### ⚠️ Importante
+
 Este proyecto **requiere un servidor HTTP** debido al uso de **ES6 Modules**. No funcionará abriendo directamente `index.html` en el navegador (protocolo `file://`) por las políticas CORS.
 
 ---
@@ -65,6 +66,7 @@ Ver documentación arquitectónica completa: **[ARQUITECTURA.md](./ARQUITECTURA.
 Este proyecto está compuesto por **5 Web Components** independientes:
 
 #### 1. `<wc-crono>` - Orquestador Principal
+
 **Responsabilidad**: Controlar el estado del cronómetro y coordinar componentes.
 
 - Gestiona el contador (centésimas de segundo)
@@ -74,6 +76,7 @@ Este proyecto está compuesto por **5 Web Components** independientes:
 - Estados: Detenido → Ejecutando → Pausado
 
 #### 2. `<wc-contenedor-digitos>` - Gestor de Tiempo
+
 **Responsabilidad**: Formatear el tiempo y actualizar dígitos.
 
 - Escucha eventos `actualizarTiempo`
@@ -82,6 +85,7 @@ Este proyecto está compuesto por **5 Web Components** independientes:
 - Actualiza los 8 dígitos individuales mediante `querySelector`
 
 #### 3. `<wc-digito>` - Display de 7 Segmentos
+
 **Responsabilidad**: Renderizar un dígito (0-9) con segmentos LED.
 
 - Usa un `Map` con configuración de segmentos para cada número
@@ -90,6 +94,7 @@ Este proyecto está compuesto por **5 Web Components** independientes:
 - 7 segmentos: superior, laterales superiores, central, laterales inferiores, inferior
 
 #### 4. `<wc-boton>` - Botón Interactivo
+
 **Responsabilidad**: Emitir eventos personalizados al hacer click.
 
 - Crea un `<button>` real en Shadow DOM
@@ -98,6 +103,7 @@ Este proyecto está compuesto por **5 Web Components** independientes:
 - Actualiza su texto dinámicamente mediante atributos
 
 #### 5. `<wc-puntos>` - Separador Visual
+
 **Responsabilidad**: Mostrar los dos puntos (`:`) entre grupos.
 
 - Componente puramente visual
@@ -167,16 +173,16 @@ chrono/
 
 ## 🛠️ Tecnologías utilizadas
 
-| Tecnología | Uso |
-|------------|-----|
-| **Custom Elements v1** | Definición de elementos personalizados |
-| **Shadow DOM** | Encapsulación de estilos y estructura |
-| **ES6 Modules** | Sistema de módulos (`import`/`export`) |
-| **Custom Events** | Comunicación entre componentes |
-| **JavaScript ES6+** | Clases, Map, arrow functions, template literals |
-| **Observed Attributes** | Reactividad a cambios de atributos |
-| **CSS3** | Flexbox, transforms, custom properties |
-| **setInterval/clearInterval** | Control de temporización |
+| Tecnología                    | Uso                                             |
+| ----------------------------- | ----------------------------------------------- |
+| **Custom Elements v1**        | Definición de elementos personalizados          |
+| **Shadow DOM**                | Encapsulación de estilos y estructura           |
+| **ES6 Modules**               | Sistema de módulos (`import`/`export`)          |
+| **Custom Events**             | Comunicación entre componentes                  |
+| **JavaScript ES6+**           | Clases, Map, arrow functions, template literals |
+| **Observed Attributes**       | Reactividad a cambios de atributos              |
+| **CSS3**                      | Flexbox, transforms, custom properties          |
+| **setInterval/clearInterval** | Control de temporización                        |
 
 ---
 
@@ -212,38 +218,43 @@ chrono/
 
 Cada número del 0 al 9 se representa activando segmentos específicos:
 
-| Número | Segmentos activos |
-|--------|-------------------|
-| **0** | Todos excepto central |
-| **1** | Laterales derechos |
-| **2** | Superior, derecho superior, central, izquierdo inferior, inferior |
-| **3** | Superior, derechos, central, inferior |
-| **4** | Izquierdo superior, derechos, central |
-| **5** | Superior, izquierdo superior, central, derecho inferior, inferior |
-| **6** | Superior, izquierdo superior, central, inferiores, inferior |
-| **7** | Superior, derechos |
-| **8** | Todos |
-| **9** | Todos excepto izquierdo inferior |
+| Número | Segmentos activos                                                 |
+| ------ | ----------------------------------------------------------------- |
+| **0**  | Todos excepto central                                             |
+| **1**  | Laterales derechos                                                |
+| **2**  | Superior, derecho superior, central, izquierdo inferior, inferior |
+| **3**  | Superior, derechos, central, inferior                             |
+| **4**  | Izquierdo superior, derechos, central                             |
+| **5**  | Superior, izquierdo superior, central, derecho inferior, inferior |
+| **6**  | Superior, izquierdo superior, central, inferiores, inferior       |
+| **7**  | Superior, derechos                                                |
+| **8**  | Todos                                                             |
+| **9**  | Todos excepto izquierdo inferior                                  |
 
 ---
 
 ## 🧩 Patrones de diseño aplicados
 
 ### 1. Component-Based Architecture
+
 Cada funcionalidad encapsulada en un componente independiente y reutilizable.
 
 ### 2. Observer Pattern (Pub/Sub)
+
 Comunicación mediante Custom Events sin acoplamiento directo entre componentes.
 
 ### 3. Separation of Concerns
+
 - **Lógica**: Archivos `.js` de cada componente
 - **Estilos**: Archivos `styles.js` / `estilos.js`
 - **Template**: Archivos `template.js`
 
 ### 4. Encapsulation (Shadow DOM)
+
 Estilos y DOM privados que no afectan ni son afectados por el DOM global.
 
 ### 5. Composition over Inheritance
+
 Componentes se componen jerárquicamente en lugar de heredar.
 
 ---
@@ -258,17 +269,17 @@ class Digito extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
   }
-  
+
   connectedCallback() {
     this.render();
   }
-  
+
   static get observedAttributes() {
-    return ['numero'];
+    return ["numero"];
   }
-  
+
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'numero') {
+    if (name === "numero") {
       this.renderNumero();
     }
   }
@@ -281,11 +292,13 @@ customElements.define("wc-digito", Digito);
 
 ```javascript
 // Emisor (Boton)
-this.dispatchEvent(new CustomEvent("customClick", {
-  detail: { titulo: this.titulo },
-  bubbles: true,
-  composed: true  // Atraviesa Shadow DOM
-}));
+this.dispatchEvent(
+  new CustomEvent("customClick", {
+    detail: { titulo: this.titulo },
+    bubbles: true,
+    composed: true, // Atraviesa Shadow DOM
+  })
+);
 
 // Receptor (Crono)
 window.addEventListener("customClick", (event) => {
@@ -297,8 +310,8 @@ window.addEventListener("customClick", (event) => {
 
 ```javascript
 const numeros = new Map([
-  [0, ["central"]],  // Oculta solo el segmento central
-  [1, ["central-superior", "izqui-superior", /* ... */]],
+  [0, ["central"]], // Oculta solo el segmento central
+  [1, ["central-superior", "izqui-superior" /* ... */]],
   // ... resto de números
 ]);
 ```
@@ -323,16 +336,19 @@ const numeros = new Map([
 ## 🐛 Solución de problemas
 
 ### El cronómetro no se muestra
+
 - ✅ Verifica que estés ejecutando un servidor HTTP
 - ✅ Abre la consola del navegador para ver errores
 - ✅ Confirma que `main.js` se carga como módulo (`type="module"`)
 
 ### Los eventos no funcionan
+
 - ✅ Verifica que los eventos tengan `composed: true`
 - ✅ Comprueba el binding correcto (`.bind(this)` en el constructor)
 - ✅ Confirma que los listeners estén registrados correctamente
 
 ### Los estilos no se aplican
+
 - ✅ Los estilos dentro de Shadow DOM no afectan al exterior
 - ✅ Usa `:host` para estilos del componente
 - ✅ Usa `::slotted()` para estilos de contenido proyectado
@@ -357,11 +373,13 @@ const numeros = new Map([
 ## 📖 Recursos adicionales
 
 ### Documentación oficial
+
 - [MDN - Custom Elements](https://developer.mozilla.org/es/docs/Web/Web_Components/Using_custom_elements)
 - [MDN - Shadow DOM](https://developer.mozilla.org/es/docs/Web/Web_Components/Using_shadow_DOM)
 - [MDN - Custom Events](https://developer.mozilla.org/es/docs/Web/API/CustomEvent)
 
 ### Análisis detallado
+
 - [ARQUITECTURA.md](./ARQUITECTURA.md) - Documentación arquitectónica completa con diagramas Mermaid
 
 ---
