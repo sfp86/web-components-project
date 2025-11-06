@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <!-- Instancia de prueba del custom element -->
+    <wc-crono>
+      <wc-contenedor-digitos>
+        <wc-digito id="decenasHoras" numero="0"></wc-digito>
+        <wc-digito id="unidadesHoras" numero="0"></wc-digito>
+
+        <wc-puntos></wc-puntos>
+
+        <wc-digito id="decenasMinutos" numero="0"></wc-digito>
+        <wc-digito id="unidadesMinutos" numero="0"></wc-digito>
+
+        <wc-puntos></wc-puntos>
+
+        <wc-digito id="decenasSegundos" numero="0"></wc-digito>
+        <wc-digito id="unidadesSegundos" numero="0"></wc-digito>
+
+        <wc-puntos></wc-puntos>
+
+        <wc-digito id="decenasMilisegundos" numero="0"></wc-digito>
+        <wc-digito id="unidadesMilisegundos" numero="0"></wc-digito>
+      </wc-contenedor-digitos>
+    </wc-crono>
+
+    <!-- <wc-boton titulo="Iniciar"></wc-boton>
+    <wc-boton titulo="Reiniciar"></wc-boton> -->
+
+    <!-- <script>
+      console.log("Script cargado - esperando eventos customClick");
+
+      window.addEventListener("customClick", (e) => {
+        console.log("Se hizo clic en un botón");
+        console.log("Detalle del evento:", e.detail);
+      });
+
+      // // También escuchar directamente en document para debug
+      // document.addEventListener("customClick", (e) => {
+      //   console.log("Evento capturado en document:", e.detail);
+      // });
+    </script> -->
+  </body>
+</html>
