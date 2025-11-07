@@ -6,11 +6,32 @@
     <title>Lit Element - Scaffolding</title>
   </head>
   <body>
-    <div id="app">
-      <!-- <my-element></my-element> -->
-      <!-- <wc-boton titulo="Botón 1"></wc-boton> -->
+    <!--    <div id="app">
+      <my-element></my-element>
+      <wc-boton titulo="Botón 1"></wc-boton>
       <wc-home-view></wc-home-view>
-    </div>
+    </div> -->
     <script type="module" src="/src/main.js"></script>
+
+    <h1>Componente Navegacion</h1>
+
+    <wc-router name="main-router">
+      <wc-navbar></wc-navbar>
+
+      <wc-viewport>
+        <wc-route path="/">
+          <h1>Hola desde Home</h1>
+          <wc-home-view></wc-home-view>
+        </wc-route>
+        <wc-route path="/acerca-de">
+          <h1>Hola desde Acerca de</h1>
+          <wc-acerca-de-view></wc-acerca-de-view>
+        </wc-route>
+        <wc-route path="/contacto">
+          <h1>Hola desde Contacto</h1>
+          <wc-contacto-view></wc-contacto-view>
+        </wc-route>
+      </wc-viewport>
+    </wc-router>
   </body>
 </html>
