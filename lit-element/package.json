@@ -1,0 +1,28 @@
+{
+  "name": "lit-element",
+  "version": "1.0.0",
+  "description": "Scaffolding base para proyectos Lit Element",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "serve": "vite"
+  },
+  "keywords": [
+    "lit-element",
+    "web-components",
+    "scaffolding"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit": "^3.2.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10",
+    "vitest": "^2.1.5"
+  }
+}
