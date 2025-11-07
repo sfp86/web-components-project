@@ -1,4 +1,3 @@
 import "./components/boton/boton";
 import "./components/my-element/my-element.js";
-
-console.log("Lit Element App initialized");
+import "./vistas/home/home.js";

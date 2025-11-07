@@ -62,7 +62,35 @@ Cada ejercicio está comentado en `index.html`. Para probar un ejercicio especí
 
 ---
 
-### Ejercicio 2: My Element (`<my-element>`) - Demo inicial
+### Ejercicio 2: Componente Tabla (`<wc-tabla>`)
+
+**Objetivo**: Aprender a renderizar listas dinámicas y trabajar con vistas.
+
+**Cómo probarlo**:
+
+```html
+<!-- Comenta el componente actual -->
+<!-- <my-element></my-element> -->
+
+<!-- Descomenta este -->
+<wc-home></wc-home>
+```
+
+**Conceptos que aprenderás**:
+
+- ✅ Renderizado de listas con `.map()`
+- ✅ Propiedades de tipo `Array`
+- ✅ Composición de componentes (Home contiene Tabla)
+- ✅ Paso de datos entre componentes padre-hijo
+- ✅ Templates HTML con `html` tagged template
+
+**Archivos**:
+- `src/vistas/home/home.js` - Componente contenedor con datos
+- `src/vistas/home/tabla.js` - Componente tabla que renderiza la lista
+
+---
+
+### Ejercicio 3: My Element (`<my-element>`) - Demo inicial
 
 **Objetivo**: Componente de ejemplo del scaffolding con contador.
 
