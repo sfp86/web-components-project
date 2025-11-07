@@ -1,25 +1,19 @@
-# 🔥 Lit Element - Proyectos
+# 🔥 Lit Element - Proyecto Educativo
 
-Colección de proyectos desarrollados con **Lit Element**, una librería ligera para crear Web Components con una sintaxis moderna y reactiva.
+Proyecto educativo desarrollado con **Lit Element**, una librería ligera para crear Web Components con una sintaxis moderna y reactiva.
 
 ---
 
-## 📦 Proyectos
+## 📦 Componentes desarrollados
 
-### 🔢 App Counter (Próximamente)
+Este proyecto contiene una serie de ejercicios prácticos que cubren desde componentes básicos hasta sistemas complejos de routing:
 
-Contador interactivo básico para aprender los fundamentos de Lit Element.
+✅ **wc-boton** - Botón interactivo con eventos  
+✅ **wc-tabla** - Tabla dinámica con renderizado de listas  
+✅ **wc-registro** - Formulario con eventos personalizados  
+✅ **Sistema de routing** - Navegación SPA con eventos
 
-**Características**:
-
-- Propiedades reactivas
-- Event handlers
-- Estilos encapsulados
-- Decoradores
-
-### 📋 App Todo (Próximamente)
-
-Lista de tareas con gestión de estado.
+Cada componente está documentado como un ejercicio en el **Workbook** más abajo.
 
 ---
 
@@ -27,7 +21,14 @@ Lista de tareas con gestión de estado.
 
 ### Cómo usar los ejercicios
 
-Cada ejercicio está comentado en `index.html`. Para probar un ejercicio específico:
+Cada ejercicio está desarrollado en su propia rama de Git siguiendo el flujo de trabajo:
+
+- `feature/componente-boton` → `develop` (Ejercicio 1)
+- `feature/componente-tabla` → `develop` (Ejercicio 2)
+- `feature/componente-registro` → `develop` (Ejercicio 3)
+- `feature/component-routing` → `develop` (Ejercicio 4)
+
+Para probar un ejercicio específico en la rama `develop`:
 
 1. Abre `lit-element/index.html`
 2. **Comenta** el componente actual
@@ -37,6 +38,8 @@ Cada ejercicio está comentado en `index.html`. Para probar un ejercicio especí
 ---
 
 ### Ejercicio 1: Componente Botón (`<wc-boton>`)
+
+🌿 **Rama**: `feature/componente-boton` (merged to `develop`)
 
 **Objetivo**: Aprender propiedades reactivas y event listeners en Lit Element.
 
@@ -63,6 +66,8 @@ Cada ejercicio está comentado en `index.html`. Para probar un ejercicio especí
 ---
 
 ### Ejercicio 2: Componente Tabla (`<wc-tabla>`)
+
+🌿 **Rama**: `feature/componente-tabla` (merged to `develop`)
 
 **Objetivo**: Aprender a renderizar listas dinámicas y trabajar con vistas.
 
@@ -92,6 +97,8 @@ Cada ejercicio está comentado en `index.html`. Para probar un ejercicio especí
 ---
 
 ### Ejercicio 3: Componente Registro (`<wc-registro-view>`)
+
+🌿 **Rama**: `feature/componente-registro` (merged to `develop`)
 
 **Objetivo**: Aprender a manejar formularios, eventos personalizados y comunicación entre componentes.
 
@@ -123,6 +130,8 @@ Cada ejercicio está comentado en `index.html`. Para probar un ejercicio especí
 ---
 
 ### Ejercicio 4: Sistema de Routing (`<wc-router>`)
+
+🌿 **Rama**: `feature/component-routing` (merged to `develop`)
 
 **Objetivo**: Aprender a implementar un sistema de enrutamiento del lado del cliente usando eventos personalizados y manipulación del Shadow DOM.
 

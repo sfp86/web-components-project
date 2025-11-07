@@ -11,6 +11,7 @@ Colección de proyectos educativos sobre **Web Components** desarrollados con di
 Cronómetro con display de 7 segmentos estilo LED, implementado **sin frameworks** usando solo Web Components nativos.
 
 **Características**:
+
 - ✅ Display de 7 segmentos con renderizado dinámico
 - ✅ Precisión de centésimas de segundo
 - ✅ Botones de Iniciar/Pausar y Reiniciar
@@ -23,6 +24,7 @@ Cronómetro con display de 7 segmentos estilo LED, implementado **sin frameworks
 **[📖 Documentación completa](./chrono/ARQUITECTURA.md)** | **[📄 README del proyecto](./chrono/README.md)**
 
 **Vista previa**:
+
 ```
 ┌──────────────────────────────────┐
 │      00 : 00 : 00 : 00          │
@@ -32,17 +34,20 @@ Cronómetro con display de 7 segmentos estilo LED, implementado **sin frameworks
 
 ---
 
-### 2. [🔥 Lit Element Apps](./lit-element) - 🆕
+### 2. [🔥 Lit Element](./lit-element) - 🆕
 
-Proyectos desarrollados con **Lit Element**, una librería ligera que simplifica la creación de Web Components con sintaxis moderna y reactiva.
+Proyecto educativo desarrollado con **Lit Element**, una librería ligera que simplifica la creación de Web Components con sintaxis moderna y reactiva.
 
-**Tecnologías**: Lit 3.x, Decorators, Reactive Properties, Vite
+**Tecnologías**: Lit 3.x, Reactive Properties, Vite
 
-**Proyectos incluidos**:
-- 🔢 **App Counter** (Próximamente) - Contador reactivo básico
-- 📋 **App Todo** (Próximamente) - Lista de tareas con gestión de estado
+**Componentes desarrollados**:
 
-**[📄 Ver proyectos Lit Element](./lit-element/README.md)**
+- ✅ **wc-boton** - Botón interactivo con eventos
+- ✅ **wc-tabla** - Tabla con renderizado de listas
+- ✅ **wc-registro** - Formulario con eventos personalizados
+- ✅ **Sistema de routing** - Navegación SPA con eventos
+
+**[📄 Ver Workbook de ejercicios](./lit-element/README.md)**
 
 ---
 
@@ -74,8 +79,8 @@ http-server ./
 ### Proyectos Lit Element (lit-element/)
 
 ```bash
-# Navegar al proyecto específico
-cd lit-element/app-counter
+# Navegar al proyecto
+cd lit-element
 
 # Instalar dependencias
 npm install
@@ -90,16 +95,16 @@ npm run dev
 
 ## 📊 Comparación de tecnologías
 
-| Característica | Vanilla WC | Lit Element | StencilJS |
-|----------------|------------|-------------|-----------|
-| **Tamaño** | 0 KB (nativo) | ~5 KB | ~6 KB |
-| **Curva aprendizaje** | Media | Baja | Media |
-| **Reactividad** | Manual | Automática | Automática |
-| **TypeScript** | Opcional | Opcional | Incluido |
-| **Build requerido** | ❌ No | ✅ Sí (Vite) | ✅ Sí |
-| **Decoradores** | ❌ No | ✅ Sí | ✅ Sí |
-| **Performance** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Ecosistema** | Nativo | Medio | Grande |
+| Característica        | Vanilla WC    | Lit Element  | StencilJS  |
+| --------------------- | ------------- | ------------ | ---------- |
+| **Tamaño**            | 0 KB (nativo) | ~5 KB        | ~6 KB      |
+| **Curva aprendizaje** | Media         | Baja         | Media      |
+| **Reactividad**       | Manual        | Automática   | Automática |
+| **TypeScript**        | Opcional      | Opcional     | Incluido   |
+| **Build requerido**   | ❌ No         | ✅ Sí (Vite) | ✅ Sí      |
+| **Decoradores**       | ❌ No         | ⚠️ Opcional  | ✅ Sí      |
+| **Performance**       | ⭐⭐⭐⭐⭐    | ⭐⭐⭐⭐⭐   | ⭐⭐⭐⭐⭐ |
+| **Ecosistema**        | Nativo        | Medio        | Grande     |
 
 ### Alternativa sin instalación:
 
@@ -129,9 +134,9 @@ npx http-server ./
 | Tecnología | Uso |
 |------------|-----|
 | Lit 3.x | Librería base |
-| Decorators | Sintaxis simplificada |
+| Reactive Properties | Sistema de reactividad |
 | Vite | Build tool y dev server |
-| TypeScript | Tipado (opcional) |
+| JavaScript ES6+ | Lenguaje base |
 
 **StencilJS (próximamente)**
 | Tecnología | Uso |
@@ -177,12 +182,6 @@ web-components-projects/
 ├── README.md                    # Este archivo
 ├── .gitignore                   # Archivos ignorados por git
 │
-```
-web-components-project/
-│
-├── README.md                    # Este archivo
-├── .gitignore                   # Archivos ignorados por git
-│
 ├── chrono/                      # Vanilla Web Components
 │   ├── README.md
 │   ├── ARQUITECTURA.md
@@ -194,15 +193,23 @@ web-components-project/
 │   ├── digito/
 │   └── puntos/
 │
-├── lit-element/                 # Proyectos Lit Element
-│   ├── README.md
-│   ├── app-counter/             # Proyecto 1: Contador
-│   │   ├── package.json
-│   │   ├── vite.config.js
-│   │   ├── index.html
-│   │   └── src/
-│   └── app-todo/                # Proyecto 2: Todo List
-│       └── ...
+├── lit-element/                 # Proyecto Lit Element
+│   ├── README.md                # Workbook con ejercicios
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── index.html
+│   ├── src/
+│   │   ├── main.js
+│   │   ├── components/
+│   │   │   ├── boton/
+│   │   │   ├── navbar/
+│   │   │   ├── routing/
+│   │   │   └── my-element/
+│   │   └── vistas/
+│   │       ├── home/
+│   │       ├── acerca-de/
+│   │       └── contacto/
+│   └── .prettierrc
 │
 └── stencil/                     # Proyectos StencilJS (futuro)
     └── ...
@@ -268,16 +275,19 @@ Para navegadores antiguos, se puede usar [polyfills](https://github.com/webcompo
 ### Documentación oficial
 
 **Web Components**
+
 - [MDN - Web Components](https://developer.mozilla.org/es/docs/Web/Web_Components)
 - [Custom Elements v1](https://html.spec.whatwg.org/multipage/custom-elements.html)
 - [Shadow DOM v1](https://dom.spec.whatwg.org/#shadow-trees)
 
 **Lit Element**
+
 - [Lit.dev](https://lit.dev/) - Documentación oficial
 - [Lit Tutorial](https://lit.dev/tutorial/) - Tutorial interactivo
 - [Lit Playground](https://lit.dev/playground/) - Editor online
 
 **StencilJS**
+
 - [StencilJS.com](https://stenciljs.com/) - Documentación oficial
 - [Stencil Components](https://stenciljs.com/docs/my-first-component)
 
@@ -329,16 +339,19 @@ MIT License - Proyecto educativo de código abierto.
 Ideas para futuros componentes:
 
 **Vanilla Web Components**
+
 - [x] ⏱️ Cronómetro digital con 7 segmentos
 
 **Lit Element**
-- [ ] 🔢 Contador reactivo (app-counter)
-- [ ] 📋 Lista de tareas (app-todo)
-- [ ] 🎮 Sistema de tabs/pestañas
-- [ ] 🎨 Selector de colores personalizado
-- [ ] 🌓 Interruptor de tema claro/oscuro
+
+- [x] � Botón interactivo (wc-boton)
+- [x] 📋 Tabla de datos (wc-tabla)
+- [x] 📝 Formulario de registro (wc-registro)
+- [x] 🧭 Sistema de routing
+- [ ] � Otros componentes avanzados
 
 **StencilJS**
+
 - [ ] 📅 Selector de fecha personalizado
 - [ ] 📊 Gráficos con Canvas
 - [ ] 🔔 Sistema de notificaciones
