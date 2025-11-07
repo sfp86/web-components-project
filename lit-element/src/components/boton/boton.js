@@ -1,4 +1,4 @@
-import { LitElement, css, html } from "lit";
+import { LitElement, css, html } from 'lit';
 
 /**
  * Componente Botón con Lit Element
@@ -37,16 +37,16 @@ class Boton extends LitElement {
   }
 
   firstUpdated() {
-    this.boton = this.shadowRoot.querySelector("button");
+    this.boton = this.shadowRoot.querySelector('button');
   }
 
   mouseDownListener(event) {
-    this.boton.style.backgroundColor = "#0c0cdfff";
+    this.boton.style.backgroundColor = '#0c0cdfff';
     // Alternativa: event.target.style.backgroundColor = "#e20e4bff";
   }
 
   mouseUpListener(event) {
-    this.boton.style.backgroundColor = "#0de118ff";
+    this.boton.style.backgroundColor = '#0de118ff';
   }
 
   constructor() {
@@ -57,4 +57,4 @@ class Boton extends LitElement {
   }
 }
 
-window.customElements.define("wc-boton", Boton);
+window.customElements.define('wc-boton', Boton);

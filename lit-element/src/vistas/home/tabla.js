@@ -1,4 +1,4 @@
-import { LitElement, html } from "lit";
+import { LitElement, html } from 'lit';
 
 class Tabla extends LitElement {
   static get properties() {
@@ -33,4 +33,4 @@ class Tabla extends LitElement {
     `;
   }
 }
-window.customElements.define("wc-tabla", Tabla);
+window.customElements.define('wc-tabla', Tabla);

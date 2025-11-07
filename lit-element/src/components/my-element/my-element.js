@@ -1,4 +1,4 @@
-import { LitElement, css, html } from "lit";
+import { LitElement, css, html } from 'lit';
 
 export class MyElement extends LitElement {
   static properties = {
@@ -72,7 +72,7 @@ export class MyElement extends LitElement {
 
   constructor() {
     super();
-    this.name = "Lit Element";
+    this.name = 'Lit Element';
     this.count = 0;
   }
 
@@ -106,4 +106,4 @@ export class MyElement extends LitElement {
   }
 }
 
-customElements.define("my-element", MyElement);
+customElements.define('my-element', MyElement);
