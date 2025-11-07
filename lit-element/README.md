@@ -115,6 +115,7 @@ Cada ejercicio está comentado en `index.html`. Para probar un ejercicio especí
 - ✅ Two-way data binding con `.value`
 
 **Archivos**:
+
 - `src/vistas/home/home.js` - Componente contenedor que gestiona la lista
 - `src/vistas/home/registro.js` - Formulario que emite eventos personalizados
 - `src/vistas/home/tabla.js` - Componente tabla que muestra los registros
