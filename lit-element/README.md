@@ -23,6 +23,57 @@ Lista de tareas con gestión de estado.
 
 ---
 
+## 📖 Workbook - Ejercicios Prácticos
+
+### Cómo usar los ejercicios
+
+Cada ejercicio está comentado en `index.html`. Para probar un ejercicio específico:
+
+1. Abre `lit-element/index.html`
+2. **Comenta** el componente actual
+3. **Descomenta** el componente del ejercicio que quieres probar
+4. Guarda y el servidor recargará automáticamente
+
+---
+
+### Ejercicio 1: Componente Botón (`<wc-boton>`)
+
+**Objetivo**: Aprender propiedades reactivas y event listeners en Lit Element.
+
+**Cómo probarlo**:
+
+```html
+<!-- Comenta el componente actual -->
+<!-- <my-element></my-element> -->
+
+<!-- Descomenta este -->
+<wc-boton titulo="Botón 1"></wc-boton>
+```
+
+**Conceptos que aprenderás**:
+
+- ✅ Propiedades reactivas con `static get properties()`
+- ✅ Event listeners con `@mousedown` y `@mouseup`
+- ✅ Estilos encapsulados con `css` tagged template
+- ✅ Manipulación del Shadow DOM con `querySelector`
+- ✅ Lifecycle: `firstUpdated()`
+
+**Archivo**: `src/components/boton/boton.js`
+
+---
+
+### Ejercicio 2: My Element (`<my-element>`) - Demo inicial
+
+**Objetivo**: Componente de ejemplo del scaffolding con contador.
+
+```html
+<my-element></my-element>
+```
+
+**Archivo**: `src/components/my-element/my-element.js`
+
+---
+
 ## 🚀 ¿Qué es Lit Element?
 
 **Lit** es una librería simple para crear Web Components rápidos y ligeros.
