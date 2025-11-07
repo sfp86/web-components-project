@@ -91,7 +91,37 @@ Cada ejercicio está comentado en `index.html`. Para probar un ejercicio especí
 
 ---
 
-### Ejercicio 3: My Element (`<my-element>`) - Demo inicial
+### Ejercicio 3: Componente Registro (`<wc-registro-view>`)
+
+**Objetivo**: Aprender a manejar formularios, eventos personalizados y comunicación entre componentes.
+
+**Cómo probarlo**:
+
+```html
+<!-- Comenta el componente actual -->
+<!-- <my-element></my-element> -->
+
+<!-- Descomenta este -->
+<wc-home-view></wc-home-view>
+```
+
+**Conceptos que aprenderás**:
+
+- ✅ Manejo de formularios con `@input` y `@click`
+- ✅ Eventos personalizados con `CustomEvent`
+- ✅ Propagación de eventos (`bubbles` y `composed`)
+- ✅ Comunicación padre-hijo con eventos
+- ✅ Actualización inmutable de arrays con `Object.assign()`
+- ✅ Two-way data binding con `.value`
+
+**Archivos**:
+- `src/vistas/home/home.js` - Componente contenedor que gestiona la lista
+- `src/vistas/home/registro.js` - Formulario que emite eventos personalizados
+- `src/vistas/home/tabla.js` - Componente tabla que muestra los registros
+
+---
+
+### Ejercicio 4: My Element (`<my-element>`) - Demo inicial
 
 **Objetivo**: Componente de ejemplo del scaffolding con contador.
 

@@ -1,7 +1,14 @@
 import { LitElement, html } from 'lit';
+import './registro.js';
 import './tabla.js';
 
 export class HomeView extends LitElement {
+  static get properties() {
+    return {
+      lista: { type: Array },
+    };
+  }
+
   constructor() {
     super();
     this.lista = [
@@ -11,7 +18,18 @@ export class HomeView extends LitElement {
     ];
   }
   render() {
-    return html` <wc-tabla .lista="${this.lista}"></wc-tabla> `;
+    return html`
+      <wc-registro-view
+        @guardarRegistro="${this.handleGuardarRegistro}"
+      ></wc-registro-view>
+      <wc-tabla .lista="${this.lista}"></wc-tabla>
+    `;
+  }
+
+  handleGuardarRegistro(event) {
+    let newList = Object.assign([], this.lista);
+    newList.push(event.detail);
+    this.lista = newList;
   }
 }
 
