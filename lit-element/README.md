@@ -122,7 +122,76 @@ Cada ejercicio está comentado en `index.html`. Para probar un ejercicio especí
 
 ---
 
-### Ejercicio 4: My Element (`<my-element>`) - Demo inicial
+### Ejercicio 4: Sistema de Routing (`<wc-router>`)
+
+**Objetivo**: Aprender a implementar un sistema de enrutamiento del lado del cliente usando eventos personalizados y manipulación del Shadow DOM.
+
+**Cómo probarlo**:
+
+```html
+<!-- Comenta el componente actual -->
+<!-- <my-element></my-element> -->
+
+<!-- Descomenta este -->
+<wc-router name="main-router">
+  <wc-navbar></wc-navbar>
+  <wc-viewport vistaActual="/">
+    <wc-route path="/">
+      <h1>Hola desde Home</h1>
+      <wc-home-view></wc-home-view>
+    </wc-route>
+    <wc-route path="/acerca-de">
+      <h1>Hola desde Acerca de</h1>
+      <wc-acerca-de-view></wc-acerca-de-view>
+    </wc-route>
+    <wc-route path="/contacto">
+      <h1>Hola desde Contacto</h1>
+      <wc-contacto-view></wc-contacto-view>
+    </wc-route>
+  </wc-viewport>
+</wc-router>
+```
+
+**Conceptos que aprenderás**:
+
+- ✅ Eventos personalizados con `CustomEvent` y propagación (`bubbles`, `composed`)
+- ✅ Event listeners globales en el constructor
+- ✅ Manipulación directa del Shadow DOM con `shadowRoot.innerHTML`
+- ✅ Búsqueda de elementos con `querySelectorAll` y `Array.from()`
+- ✅ Arquitectura orientada a eventos para comunicación entre componentes
+- ✅ Gestión de múltiples routers con el atributo `name`
+- ✅ Renderizado condicional basado en rutas
+
+**Arquitectura del Sistema**:
+
+1. **`<wc-router>`**: Contenedor que escucha eventos de navegación
+2. **`<wc-link>`**: Enlaces que disparan eventos de navegación
+3. **`<wc-viewport>`**: Contenedor que renderiza la ruta activa
+4. **`<wc-route>`**: Define una ruta con su path y contenido
+5. **`<wc-navbar>`**: Barra de navegación con enlaces
+
+**Flujo de navegación**:
+
+1. Usuario hace clic en `<wc-link to="/acerca-de">`
+2. El link dispara un `CustomEvent('navigate', { to: '/acerca-de', routerName: undefined })`
+3. El evento sube por el DOM hasta `<wc-router>`
+4. El router valida que `routerName === undefined || routerName === this.name`
+5. El router llama a `viewport.renderView('/acerca-de')`
+6. El viewport busca la ruta con `path="/acerca-de"` y la renderiza en su Shadow DOM
+
+**Archivos**:
+
+- `src/components/routing/router.js` - Controlador central de enrutamiento
+- `src/components/routing/link.js` - Componente de enlace que dispara navegación
+- `src/components/routing/viewport.js` - Contenedor que renderiza rutas
+- `src/components/routing/route.js` - Definición de ruta
+- `src/components/navbar/navbar.js` - Barra de navegación
+- `src/vistas/acerca-de/acerca-de.js` - Vista "Acerca de"
+- `src/vistas/contacto/contacto.js` - Vista "Contacto"
+
+---
+
+### Ejercicio 5: My Element (`<my-element>`) - Demo inicial
 
 **Objetivo**: Componente de ejemplo del scaffolding con contador.
 
