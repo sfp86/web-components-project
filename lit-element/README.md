@@ -7,15 +7,18 @@ Colección de proyectos desarrollados con **Lit Element**, una librería ligera 
 ## 📦 Proyectos
 
 ### 🔢 App Counter (Próximamente)
+
 Contador interactivo básico para aprender los fundamentos de Lit Element.
 
 **Características**:
+
 - Propiedades reactivas
 - Event handlers
 - Estilos encapsulados
 - Decoradores
 
 ### 📋 App Todo (Próximamente)
+
 Lista de tareas con gestión de estado.
 
 ---
@@ -25,6 +28,7 @@ Lista de tareas con gestión de estado.
 **Lit** es una librería simple para crear Web Components rápidos y ligeros.
 
 ### Ventajas sobre Vanilla Web Components:
+
 - ✅ **Sintaxis declarativa** con template literals
 - ✅ **Propiedades reactivas** automáticas
 - ✅ **Decoradores** para simplificar el código
@@ -36,18 +40,19 @@ Lista de tareas con gestión de estado.
 
 ## 🛠️ Tecnologías utilizadas
 
-| Tecnología | Versión | Propósito |
-|------------|---------|-----------|
-| **Lit** | 3.x | Librería base para Web Components |
-| **TypeScript** | 5.x | Tipado estático (opcional) |
-| **Vite** | 5.x | Build tool y dev server |
-| **npm** | 10.x | Gestor de paquetes |
+| Tecnología     | Versión | Propósito                         |
+| -------------- | ------- | --------------------------------- |
+| **Lit**        | 3.x     | Librería base para Web Components |
+| **TypeScript** | 5.x     | Tipado estático (opcional)        |
+| **Vite**       | 5.x     | Build tool y dev server           |
+| **npm**        | 10.x    | Gestor de paquetes                |
 
 ---
 
 ## 📚 Conceptos de Lit Element
 
 ### Decoradores principales:
+
 - `@customElement('my-element')` - Define un custom element
 - `@property()` - Declara propiedades reactivas
 - `@state()` - Estado interno del componente
@@ -56,10 +61,10 @@ Lista de tareas con gestión de estado.
 ### Ejemplo básico:
 
 ```javascript
-import { LitElement, html, css } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { LitElement, html, css } from "lit";
+import { customElement, property } from "lit/decorators.js";
 
-@customElement('my-counter')
+@customElement("my-counter")
 export class MyCounter extends LitElement {
   @property({ type: Number })
   count = 0;
@@ -108,11 +113,13 @@ app-nombre/
 ## 📖 Recursos de aprendizaje
 
 ### Documentación oficial
+
 - [Lit.dev](https://lit.dev/) - Documentación oficial
 - [Lit Playground](https://lit.dev/playground/) - Editor online
 - [Lit Tutorial](https://lit.dev/tutorial/) - Tutorial interactivo
 
 ### Comparación con otros frameworks
+
 - **vs React**: Lit usa estándares web, React tiene ecosistema más grande
 - **vs Vue**: Lit es más ligero, Vue tiene más funcionalidades
 - **vs Vanilla WC**: Lit simplifica mucho el código repetitivo
