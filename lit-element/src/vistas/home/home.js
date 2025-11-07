@@ -1,13 +1,13 @@
-import { LitElement, html } from "lit";
-import "./tabla.js";
+import { LitElement, html } from 'lit';
+import './tabla.js';
 
 export class HomeView extends LitElement {
   constructor() {
     super();
     this.lista = [
-      { nombre: "Juan", apellidos: "Pérez Pérez", edad: 28 },
-      { nombre: "Ana", apellidos: "García García", edad: 34 },
-      { nombre: "Luis", apellidos: "Martínez Martínez", edad: 45 },
+      { nombre: 'Juan', apellidos: 'Pérez Pérez', edad: 28 },
+      { nombre: 'Ana', apellidos: 'García García', edad: 34 },
+      { nombre: 'Luis', apellidos: 'Martínez Martínez', edad: 45 },
     ];
   }
   render() {
@@ -15,4 +15,4 @@ export class HomeView extends LitElement {
   }
 }
 
-window.customElements.define("wc-home-view", HomeView);
+window.customElements.define('wc-home-view', HomeView);

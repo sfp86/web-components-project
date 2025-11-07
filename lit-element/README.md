@@ -85,6 +85,7 @@ Cada ejercicio está comentado en `index.html`. Para probar un ejercicio especí
 - ✅ Templates HTML con `html` tagged template
 
 **Archivos**:
+
 - `src/vistas/home/home.js` - Componente contenedor con datos
 - `src/vistas/home/tabla.js` - Componente tabla que renderiza la lista
 
@@ -140,10 +141,10 @@ Cada ejercicio está comentado en `index.html`. Para probar un ejercicio especí
 ### Ejemplo básico:
 
 ```javascript
-import { LitElement, html, css } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import { LitElement, html, css } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 
-@customElement("my-counter")
+@customElement('my-counter')
 export class MyCounter extends LitElement {
   @property({ type: Number })
   count = 0;
